@@ -1,8 +1,12 @@
+/*global require, exports*/
 
-/*
- * GET home page.
- */
+var db = require('../models')
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
+exports.index = function(req, res) {
+  db.Meme.findAll().success(function(memes) {
+    res.render('index', {
+      title: '',
+      memes: memes.map(function(m) { return m.values })
+    })
+  })
+}

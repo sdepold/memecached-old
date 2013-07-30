@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1
+    span(style="font-size: 1.2em") M
+    | emecached
+    = (title.length > 0) ? " - " + title : ""
+  ul#tp-grid.tp-grid.tp-open(style="min-width: 310px; margin-left: 20px; height: 456px;")
+    each meme in memes
+      li(data-pile="Griffin Moore", style="transition: left 400ms ease-in-out 300ms, top 400ms ease-in-out 300ms, -webkit-transform 400ms ease-in-out 300ms; -webkit-transition: left 400ms ease-in-out 300ms, top 400ms ease-in-out 300ms, -webkit-transform 400ms ease-in-out 300ms; visibility: visible; -webkit-transform: none; left: 310px; top: 0px; display: list-item; box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px 0px; z-index: 9999;")
+        a(href="http://drbl.in/fQEv")
+          span.tp-info
+            span Clipboard
+          img(src=meme.image_url, style="visibility: visible;")

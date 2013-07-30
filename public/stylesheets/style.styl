@@ -1,0 +1,63 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: SquareFlo;
+  font-size: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+@font-face {
+  font-family: SquareFlo;
+  src: url("/fonts/SquareFlo.otf") format("opentype");
+}
+
+ul {
+  list-style-type: none;
+  position: relative;
+  display: block;
+
+  &, li {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  li {
+    position: absolute;
+    cursor: pointer;
+    border: 10px solid #fff;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    display: none;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    a {
+      display: block;
+      outline: none;
+
+      .tp-info {
+        position: absolute;
+        background: #fff;
+        line-height: 20px;
+        color: #333;
+        top: 40%;
+        width: 75%;
+        padding: 10px;
+        font-weight: 700;
+        text-align: right;
+        left: -100%;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.1), 5px 0 5px -3px rgba(0,0,0,0.4), inset 0 0 5px rgba(0,0,0,0.04);
+      }
+    }
+  }
+}
