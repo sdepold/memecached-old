@@ -1,10 +1,10 @@
 extends layout
 
 block js
-  - if (!!activeMeme)
+  - if (!!meme)
     script
       $(function() {
-        var $a   = $("[data-id=#{activeMeme.id}] a")
+        var $a   = $("[data-id=#{meme.id}] a")
           , $img = $a.find('img')
 
         $.fancybox({ href: $img.attr('src') })
