@@ -35,6 +35,7 @@ if ('development' === app.get('env')) {
 }
 
 app.get('/', routes.index)
+app.get('/memes/:id', routes.index)
 
 db.sequelize.sync().complete(function(err) {
   if (err) {

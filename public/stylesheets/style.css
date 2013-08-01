@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 0 50px 50px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 h1 {
@@ -13,35 +13,32 @@ a {
   font-family: SquareFlo;
   src: url("/fonts/SquareFlo.otf") format("opentype");
 }
-ul {
+ul.memes {
   list-style-type: none;
   position: relative;
   display: block;
 }
-ul,
-ul li {
+ul.memes,
+ul.memes li.meme {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
 }
-ul li {
-  position: absolute;
+ul.memes li.meme {
+  display: list-item;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 3px 0px;
   cursor: pointer;
   border: 10px solid #fff;
   box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-  display: none;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
+  float: left;
+  margin-right: 10px;
 }
-ul li a {
+ul.memes li.meme a {
   display: block;
   outline: none;
 }
-ul li a .tp-info {
+ul.memes li.meme a .tp-info {
   position: absolute;
   background: #fff;
   line-height: 20px;
@@ -53,4 +50,9 @@ ul li a .tp-info {
   text-align: right;
   left: -100%;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.1), 5px 0 5px -3px rgba(0,0,0,0.4), inset 0 0 5px rgba(0,0,0,0.04);
+}
+ul.memes li.meme a img {
+  width: 200px;
+  height: 150px;
+  display: block;
 }

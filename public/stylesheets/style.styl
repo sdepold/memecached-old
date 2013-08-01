@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 0 50px 50px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -17,29 +17,26 @@ a {
   src: url("/fonts/SquareFlo.otf") format("opentype");
 }
 
-ul {
+ul.memes {
   list-style-type: none;
   position: relative;
   display: block;
 
-  &, li {
+  &, li.meme {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
   }
 
-  li {
-    position: absolute;
+  li.meme {
+    display: list-item;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px 0px;
     cursor: pointer;
     border: 10px solid #fff;
     box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-    display: none;
     overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
+    float: left;
+    margin-right: 10px
 
     a {
       display: block;
@@ -57,6 +54,12 @@ ul {
         text-align: right;
         left: -100%;
         box-shadow: 1px 1px 1px rgba(0,0,0,0.1), 5px 0 5px -3px rgba(0,0,0,0.4), inset 0 0 5px rgba(0,0,0,0.04);
+      }
+
+      img {
+        width: 200px;
+        height: 150px;
+        display: block;
       }
     }
   }

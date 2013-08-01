@@ -2,6 +2,19 @@ doctype 5
 html
   head
     title= title
+
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="/javascripts/fancybox/jquery.fancybox.css?v=2.1.5", type="text/css", media="screen")
+
+    script(type="text/javascript", src="http://code.jquery.com/jquery-latest.min.js")
+    script(type="text/javascript", src="/javascripts/fancybox/jquery.fancybox.pack.js?v=2.1.5")
+
+    block js
+
   body
+    h1
+      a(href="/", style="color: #333; text-decoration: none")
+        span(style="font-size: 1.2em") M
+        | emecached
+        = (title.length > 0) ? " ... " + title : ""
     block content
